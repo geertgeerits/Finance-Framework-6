@@ -1,0 +1,184 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFrameworks>net6.0-android;net6.0-ios;net6.0-maccatalyst</TargetFrameworks>
+		<TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net6.0-windows10.0.19041.0</TargetFrameworks>
+		<!-- Uncomment to also build the tizen app. You will need to install tizen by following this: https://github.com/Samsung/Tizen.NET -->
+		<!-- <TargetFrameworks>$(TargetFrameworks);net6.0-tizen</TargetFrameworks> -->
+		<OutputType>Exe</OutputType>
+		<RootNamespace>Finance</RootNamespace>
+		<UseMaui>true</UseMaui>
+		<SingleProject>true</SingleProject>
+		<ImplicitUsings>enable</ImplicitUsings>
+
+		<!-- Display name -->
+		<ApplicationTitle>Finance</ApplicationTitle>
+
+		<!-- App Identifier -->
+		<ApplicationId>com.companyname.finance</ApplicationId>
+		<ApplicationIdGuid>54742229-37CC-49C8-814D-220A22B0EF1F</ApplicationIdGuid>
+
+		<!-- Versions -->
+		<ApplicationDisplayVersion>3.0.47</ApplicationDisplayVersion>
+		<ApplicationVersion>3</ApplicationVersion>
+
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">14.2</SupportedOSPlatformVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'maccatalyst'">14.0</SupportedOSPlatformVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">21.0</SupportedOSPlatformVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</SupportedOSPlatformVersion>
+		<TargetPlatformMinVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</TargetPlatformMinVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>
+		<Authors>Geert Geerits</Authors>
+		<Company />
+		<PackageIcon>finance_new_80p.png</PackageIcon>
+		<Description>Financial applications</Description>
+		<Copyright>Geert Geerits</Copyright>
+		<PackageReadmeFile>ReadMe.md</PackageReadmeFile>
+		<FileVersion>3.0.47</FileVersion>
+		<AssemblyVersion>3.0.47</AssemblyVersion>
+		<PackageCertificateThumbprint>3258A94BC8069F3911EA6D4619347375B5F4824A</PackageCertificateThumbprint>
+		<AppxPackageSigningEnabled>True</AppxPackageSigningEnabled>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<!-- App Icon -->
+		<MauiIcon Include="Resources\appicon.svg" ForegroundFile="Resources\appiconfg.png" Color="#75F94D" BaseSize="128,128" />
+		<!--<MauiIcon Include="Resources\AppIcon\appicon_bg.svg" ForegroundFile="Resources\AppIcon\finance_v3_128p.png" BaseSize="128,128" Color="#75F94D" />-->
+
+		<!-- Splash Screen -->
+		<MauiSplashScreen Include="Resources\appiconfg.png" Color="#75F94D" BaseSize="128,128" />
+
+		<!-- Images -->
+		<MauiImage Include="Resources\Images\*" />
+
+		<!-- Custom Fonts -->
+		<MauiFont Include="Resources\Fonts\*" />
+
+		<!-- Raw Assets (also remove the "Resources\Raw" prefix) -->
+		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Remove="PageLicense.xaml.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Remove="PageLicense.xaml" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="Microsoft.Extensions.Localization" Version="7.0.0-preview.7.22376.6" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Update="PageAmountGrossOfNet.xaml.cs">
+	    <DependentUpon>PageAmountGrossOfNet.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="PageInterestAnnual.xaml.cs">
+	    <DependentUpon>PageInterestAnnual.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="PageInterestMonthDay.xaml.cs">
+	    <DependentUpon>PageInterestMonthDay.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="PageInvestmentReturn.xaml.cs">
+	    <DependentUpon>PageInvestmentReturn.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="PageLoanDetail.xaml.cs">
+	    <DependentUpon>PageLoanDetail.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="PageInterestPayDiscount.xaml.cs">
+	    <DependentUpon>PageInterestPayDiscount.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Resources\Fin.Designer.cs">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>Fin.resx</DependentUpon>
+	  </Compile>
+	  <Compile Update="Resources\FinLang.Designer.cs">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>FinLang.resx</DependentUpon>
+	  </Compile>
+	  <Compile Update="PageSettings.xaml.cs">
+	    <DependentUpon>PageSettings.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="PageVATCalculation.xaml.cs">
+	    <DependentUpon>PageVATCalculation.xaml</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <EmbeddedResource Update="Resources\Fin.resx">
+	    <Generator>ResXFileCodeGenerator</Generator>
+	    <LastGenOutput>Fin.Designer.cs</LastGenOutput>
+	  </EmbeddedResource>
+	  <EmbeddedResource Update="Resources\FinLang.resx">
+	    <Generator>ResXFileCodeGenerator</Generator>
+	    <LastGenOutput>FinLang.Designer.cs</LastGenOutput>
+	  </EmbeddedResource>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="PageAbout.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="PageAmountGrossOfNet.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="PageDifferenceDates.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="PageDifferenceNumbers.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="PageInterestAnnual.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="PageInterestMonthDay.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="PageInterestPayDiscount.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="PageInvestmentReturn.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="PageLoanDetail.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="PageInterestEffective.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="PageInterestEffectiveBE.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="PageSettings.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="PageVATCalculation.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Update="Resources\AppIcon\finance_new_80p.png">
+	    <Pack>True</Pack>
+	    <PackagePath>\</PackagePath>
+	  </None>
+	  <None Update="Resources\ReadMe.md">
+	    <Pack>True</Pack>
+	    <PackagePath>\</PackagePath>
+	  </None>
+	</ItemGroup>
+
+	<PropertyGroup Condition="$(TargetFramework.Contains('-android')) and '$(Configuration)' == 'Release'">
+		<AndroidKeyStore>True</AndroidKeyStore>
+		<AndroidSigningKeyStore>..\myapp.keystore</AndroidSigningKeyStore>
+		<AndroidSigningKeyAlias>key</AndroidSigningKeyAlias>
+		<AndroidSigningKeyPass></AndroidSigningKeyPass>
+		<AndroidSigningStorePass></AndroidSigningStorePass>
+		<ApplicationDisplayVersion>3.0.47</ApplicationDisplayVersion>
+		<ApplicationVersion>47</ApplicationVersion>
+		<ApplicationId>com.geertgeerits.finance</ApplicationId>
+	</PropertyGroup>
+</Project>
