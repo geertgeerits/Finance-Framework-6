@@ -393,8 +393,6 @@ public partial class PageLoanDetail : ContentPage
     // Export loan with detail per period.
     private void ExportDetailLoan(object sender, EventArgs e)
     {
-        activityIndicator.IsRunning = true;
-
         // Recalculate the loan if needed.
         if (bReCalculateResult)
         {
@@ -441,8 +439,10 @@ public partial class PageLoanDetail : ContentPage
 
         // File name.
         string cFileName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), cDocumentName);
-        
+
         // Export.
+        activityIndicator.IsRunning = true;
+
         if (cExportType == "CSV ;")
         {
             cFileName += ".csv";

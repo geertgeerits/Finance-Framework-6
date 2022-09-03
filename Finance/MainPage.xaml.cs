@@ -1,8 +1,8 @@
 ﻿// Program .....: Finance.sln
 // Author ......: Geert Geerits - E-mail: geertgeerits@gmail.com
 // Copyright ...: (C) 1992-2022
-// Version .....: 3.0.47 Beta
-// Date ........: 2022-08-27 (YYYY-MM-DD)
+// Version .....: 3.0.48 Beta
+// Date ........: 2022-09-03 (YYYY-MM-DD)
 // Language ....: Microsoft Visual Studio 2022: .NET MAUI C# 10.0
 // Description .: Financial calculations
 
