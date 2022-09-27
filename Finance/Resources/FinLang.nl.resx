@@ -536,6 +536,9 @@ Gebruik dit programma geheel op eigen risico.</value>
   <data name="Settings_Text" xml:space="preserve">
     <value>Instellingen</value>
   </data>
+  <data name="ShareQuestion_Text" xml:space="preserve">
+    <value>Dit document delen?</value>
+  </data>
   <data name="System_Text" xml:space="preserve">
     <value>Systeem</value>
   </data>

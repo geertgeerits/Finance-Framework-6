@@ -536,6 +536,9 @@ Utilisez ce programme entièrement à vos propres risques.</value>
   <data name="Settings_Text" xml:space="preserve">
     <value>Réglages</value>
   </data>
+  <data name="ShareQuestion_Text" xml:space="preserve">
+    <value>Partager ce document ?</value>
+  </data>
   <data name="System_Text" xml:space="preserve">
     <value>Système</value>
   </data>

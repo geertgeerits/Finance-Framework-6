@@ -1281,6 +1281,15 @@ namespace Finance.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Share this document?.
+        /// </summary>
+        internal static string ShareQuestion_Text {
+            get {
+                return ResourceManager.GetString("ShareQuestion_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to System.
         /// </summary>
         internal static string System_Text {

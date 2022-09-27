@@ -536,6 +536,9 @@ Use this program entirely at your own risk.</value>
   <data name="Settings_Text" xml:space="preserve">
     <value>Settings</value>
   </data>
+  <data name="ShareQuestion_Text" xml:space="preserve">
+    <value>Share this document?</value>
+  </data>
   <data name="System_Text" xml:space="preserve">
     <value>System</value>
   </data>

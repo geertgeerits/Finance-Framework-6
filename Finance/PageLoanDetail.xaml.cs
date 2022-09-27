@@ -19,6 +19,7 @@ public partial class PageLoanDetail : ContentPage
     private string cEmailSubject;
     private string cEmailTitle;
     private string cEmailMessage;
+    private string cShareQuestion;
     private string cYes;
     private string cNo;
     private bool bReCalculateResult;
@@ -76,6 +77,7 @@ public partial class PageLoanDetail : ContentPage
         cEmailSubject = FinLang.EmailSubject_Text;
         cEmailTitle = FinLang.EmailTitle_Text;
         cEmailMessage = FinLang.EmailMessage_Text;
+        cShareQuestion = FinLang.ShareQuestion_Text;
         cYes = FinLang.Yes_Text;
         cNo = FinLang.No_Text;
 
@@ -391,7 +393,7 @@ public partial class PageLoanDetail : ContentPage
     }
 
     // Export loan with detail per period.
-    private void ExportDetailLoan(object sender, EventArgs e)
+    private async void ExportDetailLoan(object sender, EventArgs e)
     {
         // Recalculate the loan if needed.
         if (bReCalculateResult)
@@ -460,10 +462,13 @@ public partial class PageLoanDetail : ContentPage
         }
 
         // Open the file.
-        OpenExportFile(cFileName);
+        await OpenExportFile(cFileName);
 
         // Send file as attachment to e-mail address.
-        SendEmail(cFileName);
+        await SendEmail(cFileName);
+
+        // Open the share interface to share the file.
+        await OpenShareInterface(cFileName);
 
         activityIndicator.IsRunning = false;
     }
@@ -1227,10 +1232,8 @@ public partial class PageLoanDetail : ContentPage
     }
 
     // Open export file.
-    private async void OpenExportFile(string cFile)
+    private async Task OpenExportFile(string cFile)
     {
-        Task.Delay(800).Wait();
-
         try
         {
             await Launcher.Default.OpenAsync(new OpenFileRequest("", new ReadOnlyFile(cFile)));
@@ -1240,9 +1243,9 @@ public partial class PageLoanDetail : ContentPage
             await DisplayAlert(MainPage.cErrorTitleText, ex.Message, MainPage.cButtonCloseText);
         }
     }
-    
+
     // Send e-mail with attachment.
-    private async void SendEmail(string cFile)
+    private async Task SendEmail(string cFile)
     {
         Task.Delay(800).Wait();
 
@@ -1304,6 +1307,22 @@ public partial class PageLoanDetail : ContentPage
             await DisplayAlert(MainPage.cErrorTitleText, ex.Message, MainPage.cButtonCloseText);
             return;
         }
+    }
+
+    // Open the share interface.
+    private async Task OpenShareInterface(string cFile)
+    {
+        bool answer = await DisplayAlert("Finance", cFile + "\n\n" + cShareQuestion, cYes, cNo);
+        if (answer == false)
+        {
+            return;
+        }
+
+        await Share.Default.RequestAsync(new ShareFileRequest
+        {
+            Title = "Finance",
+            File = new ShareFile(cFile)
+        });
     }
 
     // Reset the entry fields.
