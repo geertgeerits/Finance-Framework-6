@@ -1,3 +1,4 @@
+# Finance
 Financial applications.
 
 This is my first application made with .NET MAUI.
