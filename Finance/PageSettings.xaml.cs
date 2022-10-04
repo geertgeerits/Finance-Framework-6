@@ -1,19 +1,9 @@
 using Finance.Resources;
-using System.Diagnostics;
 
 namespace Finance;
 
 public partial class PageSettings : ContentPage
 {
-    // Local variables.
-    private Stopwatch stopWatch = new();
-    private int nNoClickedEvents = 1;
-    private string cThemeTitle;
-    private string cThemeSave;
-    private string cYes;
-    private string cNo;
-    private readonly string cThemeCurrent = MainPage.cTheme;
-
     public PageSettings()
     {        
         try
@@ -22,7 +12,7 @@ public partial class PageSettings : ContentPage
         }
         catch (Exception ex)
         {
-            DisplayAlert("InitializeComponent", ex.Message, MainPage.cButtonCloseText);
+            DisplayAlert("InitializeComponent PageSettings", ex.Message, MainPage.cButtonCloseText);
             return;
         }
 
@@ -47,12 +37,7 @@ public partial class PageSettings : ContentPage
         rbnKeyboardNumeric.Content = FinLang.Numeric_Text;
         rbnKeyboardText.Content = FinLang.Text_Text;
         btnSettingsSave.Text = FinLang.Save_Text;
-        btnSettingsClear.Text = FinLang.Clear_Text;
-
-        cThemeTitle = FinLang.ThemeTitle_Text;
-        cThemeSave = FinLang.ThemeSave_Text;
-        cYes = FinLang.Yes_Text;
-        cNo = FinLang.No_Text;
+        btnSettingsReset.Text = FinLang.Reset_Text;
 
         // Set radiobutton to the used theme.
         string cCurrentTheme;
@@ -124,9 +109,6 @@ public partial class PageSettings : ContentPage
         {
             rbnKeyboardText.IsChecked = true;
         }
-
-        // Start the stopWatch for clearing all the settings.
-        stopWatch.Start();
     }
 
     // Radio button themes clicked event.
@@ -205,7 +187,7 @@ public partial class PageSettings : ContentPage
     }
 
     // Button save settings clicked event.
-    private async void OnSettingsSaveClicked(object sender, EventArgs e)
+    private void OnSettingsSaveClicked(object sender, EventArgs e)
     {
         Preferences.Default.Set("SettingTheme", MainPage.cTheme);
         Preferences.Default.Set("SettingDateFormatSystem", MainPage.bDateFormatSystem);
@@ -214,53 +196,36 @@ public partial class PageSettings : ContentPage
         Preferences.Default.Set("SettingKeyboard", MainPage.cKeyboard);
         Preferences.Default.Set("SettingLanguage", MainPage.cLanguage);
 
-        if (cThemeCurrent != MainPage.cTheme)
-        {
-            bool bAnswer = await Application.Current.MainPage.DisplayAlert(cThemeTitle, cThemeSave, cYes, cNo);
+        // Wait 500 milliseconds otherwise the settings are not saved in Android.
+        Task.Delay(500).Wait();
 
-            if (bAnswer)
-            {
-                // Wait 500 milliseconds otherwise the settings are not saved in Android.
-                Task.Delay(500).Wait();
-
-                // Close the application.
-                Application.Current.Quit();
-            }
-        }
+        // Restart the application.
+        Application.Current.MainPage = new AppShell();
     }
 
-    // Button clear settings clicked event.
-    private void OnSettingsClearClicked(object sender, EventArgs e)
+    // Button reset settings clicked event.
+    private void OnSettingsResetClicked(object sender, EventArgs e)
     {
-        // Clear some settings.
-        if (nNoClickedEvents != 4)
-        {
-            Preferences.Remove("SettingTheme");
-            Preferences.Remove("SettingDateFormatSystem");
-            Preferences.Remove("SettingPageFormat");
-            Preferences.Remove("SettingRoundNumber");
-            Preferences.Remove("SettingKeyboard");
-            Preferences.Remove("SettingLanguage");
+        // Reset some settings.
+        Preferences.Remove("SettingTheme");
+        Preferences.Remove("SettingDateFormatSystem");
+        Preferences.Remove("SettingPageFormat");
+        Preferences.Remove("SettingRoundNumber");
+        Preferences.Remove("SettingKeyboard");
+        Preferences.Remove("SettingLanguage");
 
-            nNoClickedEvents++;
-        }
-        // Clear all settings and close the application after the 4 first clicked events in the first 5 seconds after opening the page.
-        else
-        {
-            // Get the elapsed time in milli seconds.
-            stopWatch.Stop();
+        // Reset to the default values.
+        MainPage.cTheme = "System";
+        MainPage.bDateFormatSystem = true;
+        MainPage.cPageFormat = "";
+        MainPage.cRoundNumber = "AwayFromZero";
+        MainPage.cKeyboard = "Numeric";
+        MainPage.cLanguage = "";
 
-            if (stopWatch.ElapsedMilliseconds < 5001)
-            {
-                // Clear all settings.
-                Preferences.Clear();
+        // Wait 500 milliseconds otherwise the settings are not saved in Android.
+        Task.Delay(500).Wait();
 
-                // Wait 500 milliseconds otherwise the Preferences.Clear() is not executed in Android.
-                Task.Delay(500).Wait();
-                
-                // Close the application.
-                Application.Current.Quit();
-            }
-        }
+        // Restart the application.
+        Application.Current.MainPage = new AppShell();
     }
 }

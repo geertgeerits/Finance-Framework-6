@@ -190,13 +190,13 @@
                     Text="Save"
                     Clicked="OnSettingsSaveClicked" />
 
-                <Button x:Name="btnSettingsClear"
+                <Button x:Name="btnSettingsReset"
                     Style="{StaticResource buttonStyleDefault}"
                     Grid.Row="4"
                     Grid.Column="1"
-                    HorizontalOptions="Start"
-                    Text="Clear"
-                    Clicked="OnSettingsClearClicked" />
+                    HorizontalOptions="End"
+                    Text="Reset"
+                    Clicked="OnSettingsResetClicked" />
             </Grid>
         </StackLayout>
         
