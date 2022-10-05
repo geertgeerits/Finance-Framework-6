@@ -1,9 +1,13 @@
 using Finance.Resources;
+using System.Diagnostics;
 
 namespace Finance;
 
 public partial class PageSettings : ContentPage
 {
+    // Local variables.
+    private Stopwatch stopWatch = new();
+
     public PageSettings()
     {        
         try
@@ -109,6 +113,9 @@ public partial class PageSettings : ContentPage
         {
             rbnKeyboardText.IsChecked = true;
         }
+
+        // Start the stopWatch for resetting all the settings.
+        stopWatch.Start();
     }
 
     // Radio button themes clicked event.
@@ -206,21 +213,24 @@ public partial class PageSettings : ContentPage
     // Button reset settings clicked event.
     private void OnSettingsResetClicked(object sender, EventArgs e)
     {
-        // Reset some settings.
-        Preferences.Remove("SettingTheme");
-        Preferences.Remove("SettingDateFormatSystem");
-        Preferences.Remove("SettingPageFormat");
-        Preferences.Remove("SettingRoundNumber");
-        Preferences.Remove("SettingKeyboard");
-        Preferences.Remove("SettingLanguage");
+        // Get the elapsed time in milli seconds.
+        stopWatch.Stop();
 
-        // Reset to the default values.
-        MainPage.cTheme = "System";
-        MainPage.bDateFormatSystem = true;
-        MainPage.cPageFormat = "";
-        MainPage.cRoundNumber = "AwayFromZero";
-        MainPage.cKeyboard = "Numeric";
-        MainPage.cLanguage = "";
+        if (stopWatch.ElapsedMilliseconds < 3001)
+        {
+            // Clear all settings after the first clicked event within the first 3 seconds after opening the setting page.
+            Preferences.Default.Clear();
+        }
+        else
+        {
+            // Reset some settings.
+            Preferences.Default.Remove("SettingTheme");
+            Preferences.Default.Remove("SettingDateFormatSystem");
+            Preferences.Default.Remove("SettingPageFormat");
+            Preferences.Default.Remove("SettingRoundNumber");
+            Preferences.Default.Remove("SettingKeyboard");
+            Preferences.Default.Remove("SettingLanguage");
+        }
 
         // Wait 500 milliseconds otherwise the settings are not saved in Android.
         Task.Delay(500).Wait();

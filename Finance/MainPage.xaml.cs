@@ -2,7 +2,7 @@
 // Author ......: Geert Geerits - E-mail: geertgeerits@gmail.com
 // Copyright ...: (C) 1992-2022
 // Version .....: 3.0.49 Beta
-// Date ........: 2022-10-04 (YYYY-MM-DD)
+// Date ........: 2022-10-05 (YYYY-MM-DD)
 // Language ....: Microsoft Visual Studio 2022: .NET MAUI C# 10.0
 // Description .: Financial calculations
 
@@ -41,13 +41,13 @@ public partial class MainPage : ContentPage
         InitializeComponent();
 
         // Get the saved settings.License
-        cTheme = Preferences.Get("SettingTheme", "System");
-        bDateFormatSystem = Preferences.Get("SettingDateFormatSystem", true);
-        cPageFormat = Preferences.Get("SettingPageFormat", "");
-        cRoundNumber = Preferences.Get("SettingRoundNumber", "AwayFromZero");
-        cKeyboard = Preferences.Get("SettingKeyboard", "Numeric");
-        cLanguage = Preferences.Get("SettingLanguage", "");
-        bLicense = Preferences.Get("SettingLicense", false);
+        cTheme = Preferences.Default.Get("SettingTheme", "System");
+        bDateFormatSystem = Preferences.Default.Get("SettingDateFormatSystem", true);
+        cPageFormat = Preferences.Default.Get("SettingPageFormat", "");
+        cRoundNumber = Preferences.Default.Get("SettingRoundNumber", "AwayFromZero");
+        cKeyboard = Preferences.Default.Get("SettingKeyboard", "Numeric");
+        cLanguage = Preferences.Default.Get("SettingLanguage", "");
+        bLicense = Preferences.Default.Get("SettingLicense", false);
 
 #if WINDOWS
         // Set the settings default values because of a BUG in the Windows app they have NULL values !!!
