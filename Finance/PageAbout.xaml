@@ -52,7 +52,7 @@
                 <Label x:Name="lblWebsite"
                        VerticalOptions="Center" 
                        HorizontalOptions="Start"
-                       Text="geertgeerits.wixsite.com/finance"/>
+                       Text="../finance"/>
 
                 <ImageButton Source="internet_24p.png"
                              HorizontalOptions="Center"
