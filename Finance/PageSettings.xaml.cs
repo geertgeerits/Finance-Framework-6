@@ -6,7 +6,7 @@ namespace Finance;
 public partial class PageSettings : ContentPage
 {
     // Local variables.
-    private Stopwatch stopWatch = new();
+    private readonly Stopwatch stopWatch = new();
 
     public PageSettings()
     {        
