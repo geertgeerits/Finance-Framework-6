@@ -25,8 +25,8 @@ public partial class PageAbout : ContentPage
         lblCopyright.Text = FinLang.Copyright_Text + " © 1992-2022 Geert Geerits";
         lblEmail.Text = FinLang.Email_Text + " " + lblEmail.Text;
         lblWebsite.Text = FinLang.Website_Text + " " + lblWebsite.Text;
-        lblLicense.Text = FinLang.LicenseTitle_Text + ": " + FinLang.License_Text;
         lblPrivacyPolicy.Text = FinLang.PrivacyPolicyTitle_Text + " " + FinLang.PrivacyPolicy_Text;
+        lblLicense.Text = FinLang.LicenseTitle_Text + ": " + FinLang.License_Text;
         lblAboutExplanation.Text = FinLang.AboutExplanation_Text;
     }
 

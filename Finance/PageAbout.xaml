@@ -62,18 +62,22 @@
                              Clicked="OnbtnWebsiteLinkClicked">
                 </ImageButton>
             </HorizontalStackLayout>
-          
-            <Label x:Name="lblLicense"
-                   VerticalOptions="Center" 
-                   HorizontalOptions="Start"
-                   FontSize="13"
-                   Text="This application may be used freely for non-commercial purposes." />
 
+            <Label></Label>
+            
             <Label x:Name="lblPrivacyPolicy"
                    VerticalOptions="Center" 
                    HorizontalOptions="Start"
                    FontSize="13"
                    Text="No personal data and other data are stored or passed on to myself and others." />
+            
+            <Label></Label>
+            
+            <Label x:Name="lblLicense"
+                   VerticalOptions="Center" 
+                   HorizontalOptions="Start"
+                   FontSize="13"
+                   Text="This application may be used freely for non-commercial purposes." />
 
             <Label></Label>
             

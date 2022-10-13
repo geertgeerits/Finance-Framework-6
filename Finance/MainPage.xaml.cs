@@ -2,7 +2,7 @@
 // Author ......: Geert Geerits - E-mail: geertgeerits@gmail.com
 // Copyright ...: (C) 1992-2022
 // Version .....: 3.0.50 Beta
-// Date ........: 2022-10-09 (YYYY-MM-DD)
+// Date ........: 2022-10-13 (YYYY-MM-DD)
 // Language ....: Microsoft Visual Studio 2022: .NET MAUI C# 10.0
 // Description .: Financial calculations
 
@@ -48,34 +48,6 @@ public partial class MainPage : ContentPage
         cKeyboard = Preferences.Default.Get("SettingKeyboard", "Numeric");
         cLanguage = Preferences.Default.Get("SettingLanguage", "");
         bLicense = Preferences.Default.Get("SettingLicense", false);
-
-#if WINDOWS
-        // Set the settings default values because of a BUG in the Windows app they have NULL values !!!
-        if (cTheme == null)
-        {
-            cTheme = "System";
-        }
-
-        if (cPageFormat == null)
-        {
-            cPageFormat = "";
-        }
-
-        if (cRoundNumber == null)
-        {
-            cRoundNumber = "AwayFromZero";
-        }
-
-        if (cKeyboard == null)
-        {
-            cKeyboard = "Numeric";
-        }
-
-        if (cLanguage == null)
-        {
-            cLanguage = "";
-        }
-#endif
 
         // Set the theme.
         if (cTheme == "Light")

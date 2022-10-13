@@ -420,7 +420,9 @@ Entrez le montant du rendement par an et le rendement souhaité en pourcentage.<
   </data>
   <data name="License_Text" xml:space="preserve">
     <value>Cette application peut être utilisée librement à des fins non commerciales.
-Utilisez ce programme entièrement à vos propres risques.</value>
+Utilisez ce programme entièrement à vos propres risques.
+
+LE LOGICIEL EST FOURNI « EN L'ÉTAT », SANS GARANTIE D'AUCUNE SORTE, EXPRESSE OU IMPLICITE, Y COMPRIS, MAIS SANS S'Y LIMITER, LES GARANTIES DE QUALITÉ MARCHANDE, D'ADÉQUATION À UN USAGE PARTICULIER ET D'ABSENCE DE CONTREFAÇON. EN AUCUN CAS L'ÉDITEUR NE SERA RESPONSABLE DE TOUTE RÉCLAMATION, DOMMAGE OU AUTRE RESPONSABILITÉ, QUE CE SOIT DANS UNE ACTION CONTRACTUELLE, DÉLICTUELLE OU AUTRE, DÉCOULANT DE, DE OU EN RELATION AVEC LE LOGICIEL OU L'UTILISATION OU D'AUTRES TRANSACTIONS DANS LE LOGICIEL.</value>
   </data>
   <data name="Light_Text" xml:space="preserve">
     <value>Léger</value>

@@ -912,7 +912,9 @@ namespace Finance.Resources {
         
         /// <summary>
         ///   Looks up a localized string similar to This application may be used freely for non-commercial purposes.
-        ///Use this program entirely at your own risk..
+        ///Use this program entirely at your own risk.
+        ///
+        ///THE SOFTWARE IS PROVIDED &apos;AS IS&apos;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE PUBLISHER BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR  [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string License_Text {
             get {

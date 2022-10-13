@@ -420,7 +420,9 @@ Enter the amount of the yield per year and the desired yield in percentage.</val
   </data>
   <data name="License_Text" xml:space="preserve">
     <value>This application may be used freely for non-commercial purposes.
-Use this program entirely at your own risk.</value>
+Use this program entirely at your own risk.
+
+THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE PUBLISHER BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</value>
   </data>
   <data name="Light_Text" xml:space="preserve">
     <value>Light</value>
