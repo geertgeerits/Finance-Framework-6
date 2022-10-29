@@ -11,9 +11,10 @@
     
     <ScrollView>
         <Grid RowDefinitions="70, 50, 50, 50, 50, 50, 50"
-          ColumnDefinitions="170, 160, 40*"
-          ColumnSpacing="6"
-          RowSpacing="2">
+              ColumnDefinitions="170, 160, 40*"
+              Margin="10"
+              ColumnSpacing="6"
+              RowSpacing="2">
 
             <BoxView Grid.Row="0"
                      Grid.Column="0"

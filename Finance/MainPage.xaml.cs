@@ -2,7 +2,7 @@
 // Author ......: Geert Geerits - E-mail: geertgeerits@gmail.com
 // Copyright ...: (C) 1992-2022
 // Version .....: 3.0.50 Beta
-// Date ........: 2022-10-13 (YYYY-MM-DD)
+// Date ........: 2022-10-29 (YYYY-MM-DD)
 // Language ....: Microsoft Visual Studio 2022: .NET MAUI C# 10.0
 // Description .: Financial calculations
 
@@ -275,43 +275,29 @@ public partial class MainPage : ContentPage
             //string cSelected = picker.Items[selectedIndex];
             //App.Current.MainPage.DisplayAlert("cSelected", cSelected, "OK");  // For testing
 
-            switch (selectedIndex)
+            MainPage.cLanguage = selectedIndex switch
             {
                 // German (Deutsch).
-                case 0:
-                    MainPage.cLanguage = "de";
-                    break;
-
+                0 => "de",
+                
                 // Spanish (Español).
-                case 2:
-                    MainPage.cLanguage = "es";
-                    break;
-
+                2 => "es",
+                
                 // French (Français).
-                case 3:
-                    MainPage.cLanguage = "fr";
-                    break;
-
+                3 => "fr",
+                
                 // Italian (Italiano).
-                case 4:
-                    MainPage.cLanguage = "it";
-                    break;
-
+                4 => "it",
+                
                 // Dutch (Nederlands).
-                case 5:
-                    MainPage.cLanguage = "nl";
-                    break;
-
+                5 => "nl",
+                
                 // Portuguese (Português).
-                case 6:
-                    MainPage.cLanguage = "pt";
-                    break;
-
+                6 => "pt",
+                
                 // English.
-                default:
-                    MainPage.cLanguage = "en";
-                    break;
-            }
+                _ => "en",
+            };
             //App.Current.MainPage.DisplayAlert("cLanguage", cLanguage, "OK");  // For testing
             SetTextLanguage();
         }

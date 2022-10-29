@@ -12,6 +12,7 @@
     <ScrollView>
         <Grid RowDefinitions="70, 40, 40, 40, 40, 40, 40, 40, 40, 50, 40, 40, 40, 40, 40"
               ColumnDefinitions="170, 160, 40*"
+              Margin="10"
               ColumnSpacing="6"
               RowSpacing="2">
 

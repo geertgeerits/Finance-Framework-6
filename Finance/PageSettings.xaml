@@ -11,10 +11,11 @@
 
     <ScrollView>
         <StackLayout>
-            <Grid RowDefinitions="36, 36, 36"
-                  ColumnDefinitions="180, 180, 50*"
-                  ColumnSpacing="10"
-                  RowSpacing="10">
+            <Grid RowDefinitions="40, 40, 40"
+                  ColumnDefinitions="170, 160*"
+                  Margin="10"
+                  ColumnSpacing="8"
+                  RowSpacing="0">
             
                 <Label x:Name="lblTheme"
                        Style="{StaticResource labelStyleDefault}"
@@ -48,12 +49,11 @@
                              CheckedChanged="OnThemesRadioButtonCheckedChanged" />
             </Grid>
             
-            <Label></Label>
-
-            <Grid RowDefinitions="36, 36"
-                  ColumnDefinitions="180, 180, 50*"
-                  ColumnSpacing="10"
-                  RowSpacing="10">
+            <Grid RowDefinitions="40, 40"
+                  ColumnDefinitions="170, 160*"
+                  Margin="10"
+                  ColumnSpacing="8"
+                  RowSpacing="0">
 
                 <Label x:Name="lblDateFormat"
                    Style="{StaticResource labelStyleDefault}"
@@ -80,12 +80,11 @@
                          CheckedChanged="OnDateFormatRadioButtonCheckedChanged" />
             </Grid>
 
-            <Label></Label>
-
-            <Grid RowDefinitions="36, 36"
-                  ColumnDefinitions="180, 180, 50*"
-                  ColumnSpacing="10"
-                  RowSpacing="10">
+            <Grid RowDefinitions="40, 40"
+                  ColumnDefinitions="170, 160*"
+                  Margin="10"
+                  ColumnSpacing="8"
+                  RowSpacing="0">
 
                 <Label x:Name="lblPageFormat"
                    Style="{StaticResource labelStyleDefault}"
@@ -112,12 +111,11 @@
                          CheckedChanged="OnPageFormatRadioButtonCheckedChanged" />
             </Grid>
 
-            <Label></Label>
-
-            <Grid RowDefinitions="36, 36"
-                  ColumnDefinitions="180, 180, 50*"
-                  ColumnSpacing="10"
-                  RowSpacing="10">
+            <Grid RowDefinitions="40, 40"
+                  ColumnDefinitions="170, 160*"
+                  Margin="10"
+                  ColumnSpacing="8"
+                  RowSpacing="0">
 
                 <Label x:Name="lblRoundNumber"
                    Style="{StaticResource labelStyleDefault}"
@@ -144,12 +142,11 @@
                          CheckedChanged="OnRoundNumberRadioButtonCheckedChanged" />
             </Grid>
 
-            <Label></Label>
-            
-            <Grid RowDefinitions="36, 36, 36, 6, 36"
-                  ColumnDefinitions="180, 180, 50*"
-                  ColumnSpacing="10"
-                  RowSpacing="10">
+            <Grid RowDefinitions="40, 40, 40, 8, 40"
+                  ColumnDefinitions="170, 160*"
+                  Margin="10"
+                  ColumnSpacing="8"
+                  RowSpacing="0">
 
                 <Label x:Name="lblKeyboard"
                    Style="{StaticResource labelStyleDefault}"
@@ -187,6 +184,7 @@
                     Style="{StaticResource buttonStyleDefault}"
                     Grid.Row="4"
                     Grid.Column="0"
+                    HorizontalOptions="Start"
                     Text="Save"
                     Clicked="OnSettingsSaveClicked" />
 
@@ -202,9 +200,10 @@
         
         <!--Works in Android but not in Windows.-->
         <!--<Grid RowDefinitions="36, 36, 36, 6, 36, 36, 6, 36, 36, 36, 6, 36"
-              ColumnDefinitions="180, 180, 50*"
-              ColumnSpacing="10"
-              RowSpacing="10">
+                  ColumnDefinitions="170, 160*"
+                  Margin="10"
+                  ColumnSpacing="8"
+                  RowSpacing="4">
             
             <Label x:Name="lblTheme"
                    Style="{StaticResource labelStyleDefault}"
