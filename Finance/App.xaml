@@ -100,7 +100,6 @@
                 <Setter Property="Margin" Value="0" />
                 <Setter Property="HorizontalOptions" Value="Start" />
                 <Setter Property="VerticalOptions" Value="Center" />
-                <Setter Property="HeightRequest" Value="50" />
                 <Setter Property="VerticalTextAlignment" Value="Center" />
                 <Setter Property="LineBreakMode" Value="WordWrap" />
             </Style>
@@ -120,10 +119,13 @@
             <Style x:Key="labelStyleExplanation" TargetType="Label">
                 <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource DarkGray}, Dark={StaticResource LightGray}}" />
                 <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}" />
-                <Setter Property="Margin" Value="0" />
                 <Setter Property="HorizontalOptions" Value="Center" />
                 <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="MinimumHeightRequest" Value="60" />
+                <Setter Property="HorizontalTextAlignment" Value="Start" />
+                <Setter Property="VerticalTextAlignment" Value="Center" />
                 <Setter Property="LineBreakMode" Value="WordWrap" />
+                <Setter Property="Padding" Value="5" />
             </Style>
 
             <Style x:Key="labelStylePercent" TargetType="Label">
@@ -181,27 +183,17 @@
             </Style>
 
             <Style x:Key="buttonStyleCalculate" TargetType="Button">
-                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="HorizontalOptions" Value="Start" />
                 <Setter Property="VerticalOptions" Value="Center" />
-                <Setter Property="WidthRequest" Value="150" />
+                <Setter Property="WidthRequest" Value="160" />
                 <Setter Property="Text" Value="Calculate" />
             </Style>
 
             <Style x:Key="buttonStyleReset" TargetType="Button">
-                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="HorizontalOptions" Value="End" />
                 <Setter Property="VerticalOptions" Value="Center" />
-                <Setter Property="WidthRequest" Value="150" />
+                <Setter Property="WidthRequest" Value="160" />
                 <Setter Property="Text" Value="Reset" />
-            </Style>
-
-            <Style x:Key="buttonStyleKeyboard" TargetType="Button">
-                <Setter Property="BorderColor" Value="{AppThemeBinding Light={StaticResource DarkGray}, Dark={StaticResource LightGray}}" />
-                <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Dark}}" />
-                <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" />
-                <Setter Property="HorizontalOptions" Value="Center" />
-                <Setter Property="VerticalOptions" Value="Center" />
-                <Setter Property="HeightRequest" Value="38" />
-                <Setter Property="WidthRequest" Value="38" />
             </Style>
 
         </ResourceDictionary>

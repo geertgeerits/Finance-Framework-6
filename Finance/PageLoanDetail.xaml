@@ -10,9 +10,9 @@
     </Shell.TitleView>
 
     <ScrollView>
-        <Grid RowDefinitions="70, 40, 40, 40, 40, 40, 40, 40, 40, 50, 40, 40, 40, 40, 40"
-              ColumnDefinitions="170, 160, 40*"
-              Margin="10"
+        <Grid RowDefinitions="Auto, 40, 40, 40, 40, 40, 40, 40, 40, 50, 40, 40, 40, 40, 40"
+              ColumnDefinitions="160, 160, 40*"
+              Margin="8"
               ColumnSpacing="6"
               RowSpacing="2">
 
@@ -40,7 +40,6 @@
                    Style="{StaticResource labelStyleDefault}"
                    Grid.Row="1"
                    Grid.Column="0"
-                   HeightRequest="42"
                    Text="Number of decimals:" />
 
             <Border Style="{StaticResource borderStyleDefault}"
@@ -313,7 +312,7 @@
             </Border>
           
             <Button x:Name="btnExport"
-                    Style="{StaticResource buttonStyleReset}"
+                    Style="{StaticResource buttonStyleCalculate}"
                     Grid.Row="14"
                     Grid.Column="0"
                     Text="Export"

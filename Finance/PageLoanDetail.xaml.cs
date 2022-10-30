@@ -1098,7 +1098,7 @@ public partial class PageLoanDetail : ContentPage
             // Calulate the length from the streams.
             for (nRow = 1; nRow < nTextLine + 1; nRow++)
             {
-                if (cTextLines[nRow].Contains("stream") && cTextLines[nRow].Substring(0, 6) == "stream")
+                if (cTextLines[nRow].Contains("stream") && cTextLines[nRow][..6] == "stream")
                 {
                     nNumChar = 0;
                     nRowStream = nRow;
@@ -1108,7 +1108,7 @@ public partial class PageLoanDetail : ContentPage
                     nNumChar = nNumChar + cTextLines[nRow].Length + 1;
                 }
 
-                if (cTextLines[nRow].Contains("endstream") && cTextLines[nRow].Substring(0, 9) == "endstream")
+                if (cTextLines[nRow].Contains("endstream") && cTextLines[nRow][..9] == "endstream")
                 {
                     cTextLines[nRowStream - 1] = "<</Length " + Convert.ToString(nNumChar - 10) + cFilter + ">>";
                 }
@@ -1125,7 +1125,7 @@ public partial class PageLoanDetail : ContentPage
                     nNumObjects++;
                 }
 
-                if (cTextLines[nRow].Contains("xref") && cTextLines[nRow].Substring(0, 4) == "xref")
+                if (cTextLines[nRow].Contains("xref") && cTextLines[nRow][..4] == "xref")
                 {
                     aPosObject[nNumObjects] = nNumChar + 1;
                     break;
@@ -1204,18 +1204,18 @@ public partial class PageLoanDetail : ContentPage
 
             if (nPos > 0 && cText.Length > nMaxTextLength)
             {
-                cTextPart2 = cText.Substring(nPos + 1);
-                cText = cText.Substring(0, nPos);
+                cTextPart2 = cText[(nPos + 1)..];
+                cText = cText[..nPos];
             }
 
             if (cText.Length > nMaxTextLength)
             {
-                cText = cText.Substring(0, nMaxTextLength);
+                cText = cText[..nMaxTextLength];
             }
 
             if (cTextPart2.Length > nMaxTextLength)
             {
-                cTextPart2 = cTextPart2.Substring(0, nMaxTextLength);
+                cTextPart2 = cTextPart2[..nMaxTextLength];
             }
 
             cText = new String(' ', nMaxTextLength - cText.Length) + cText;
