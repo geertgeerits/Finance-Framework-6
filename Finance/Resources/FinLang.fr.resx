@@ -415,14 +415,15 @@ Entrez le montant du rendement par an et le rendement souhaité en pourcentage.<
   <data name="LicenseAgreement_Text" xml:space="preserve">
     <value>Êtes-vous d'accord avec les conditions de licence ?</value>
   </data>
+  <data name="LicenseMit2_Text" xml:space="preserve">
+    <value>Le logiciel est fourni « tel quel », sans garantie d'aucune sorte, expresse ou implicite, y compris, mais sans s'y limiter, les garanties de qualité marchande, d'adéquation à un usage particulier et d'absence de contrefaçon. En aucun cas, l'auteur et/ou l'éditeur ne pourront être tenus responsables de toute réclamation, dommage ou autre responsabilité, que ce soit dans le cadre d'une action contractuelle, délictuelle ou autre, découlant de, de ou en relation avec le logiciel ou l'utilisation ou d'autres transactions dans les logiciels.</value>
+  </data>
   <data name="LicenseTitle_Text" xml:space="preserve">
     <value>Licence</value>
   </data>
   <data name="License_Text" xml:space="preserve">
     <value>Cette application peut être utilisée librement à des fins non commerciales.
-Utilisez ce programme entièrement à vos propres risques.
-
-LE LOGICIEL EST FOURNI « EN L'ÉTAT », SANS GARANTIE D'AUCUNE SORTE, EXPRESSE OU IMPLICITE, Y COMPRIS, MAIS SANS S'Y LIMITER, LES GARANTIES DE QUALITÉ MARCHANDE, D'ADÉQUATION À UN USAGE PARTICULIER ET D'ABSENCE DE CONTREFAÇON. EN AUCUN CAS L'AUTEUR ET/OU L'EDITEUR NE SERA RESPONSABLE DE TOUTE RÉCLAMATION, DOMMAGE OU AUTRE RESPONSABILITÉ, QUE CE SOIT DANS UNE ACTION CONTRACTUELLE, DÉLICTUELLE OU AUTRE, DÉCOULANT DE, DE OU EN RELATION AVEC LE LOGICIEL OU L'UTILISATION OU D'AUTRES TRANSACTIONS DANS LE LOGICIEL.</value>
+Utilisez ce programme entièrement à vos propres risques.</value>
   </data>
   <data name="Light_Text" xml:space="preserve">
     <value>Léger</value>

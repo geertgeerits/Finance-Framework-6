@@ -415,14 +415,15 @@ Geef het bedrag van de opbrengst per jaar en het gewenste rendement in procenten
   <data name="LicenseAgreement_Text" xml:space="preserve">
     <value>Akkoord met de licentievoorwaarden?</value>
   </data>
+  <data name="LicenseMit2_Text" xml:space="preserve">
+    <value>De software wordt geleverd 'zoals ze is', zonder enige vorm van garantie, expliciet of impliciet, inclusief maar niet beperkt tot de garanties van verkoopbaarheid, geschiktheid voor een bepaald doel en niet-inbreuk. In geen geval zal de auteur en/of uitgever aansprakelijk zijn voor enige claim, schade of andere aansprakelijkheid, hetzij in een contractuele actie, onrechtmatige daad of anderszins, die voortvloeit van, uit of in verband staat met de software of het gebruik of andere transacties in de software.</value>
+  </data>
   <data name="LicenseTitle_Text" xml:space="preserve">
     <value>Licentie</value>
   </data>
   <data name="License_Text" xml:space="preserve">
-    <value>Deze applicatie mag vrij worden gebruikt voor niet commerciële doeleinden.
-Gebruik dit programma geheel op eigen risico.
-
-DE SOFTWARE WORDT GELEVERD 'AS IS', ZONDER ENIGE GARANTIE, EXPLICIET OF IMPLICIET, INCLUSIEF MAAR NIET BEPERKT TOT DE GARANTIES VAN VERKOOPBAARHEID, GESCHIKTHEID VOOR EEN BEPAALD DOEL EN NIET-INBREUK. IN GEEN GEVAL ZAL DE AUTEUR EN/OF UITGEVER AANSPRAKELIJK ZIJN VOOR ENIGE CLAIM, SCHADE OF ANDERE AANSPRAKELIJKHEID, HETZIJ IN EEN HANDELING VAN CONTRACT, ONRECHTMATIGE OF ANDERSZINS, VOORTVLOEIEND UIT, UIT OF IN VERBAND MET DE SOFTWARE OF HET GEBRUIK OF ANDERE HANDELINGEN IN DE SOFTWARE.</value>
+    <value>Deze applicatie mag vrij worden gebruikt voor niet-commerciële doeleinden.
+Gebruik dit programma geheel op eigen risico.</value>
   </data>
   <data name="Light_Text" xml:space="preserve">
     <value>Licht</value>

@@ -415,14 +415,15 @@ Immettere l'importo della resa all'anno e la resa desiderata in percentuale.</va
   <data name="LicenseAgreement_Text" xml:space="preserve">
     <value>Sei d'accordo con le condizioni della licenza?</value>
   </data>
+  <data name="LicenseMit2_Text" xml:space="preserve">
+    <value>Il software viene fornito "così com'è", senza garanzie di alcun tipo, esplicite o implicite, incluse, a titolo esemplificativo ma non esaustivo, le garanzie di commerciabilità, idoneità per uno scopo particolare e non violazione. In nessun caso l'autore e/o l'editore possono essere ritenuti responsabili per qualsiasi pretesa, danno o altra responsabilità, sia in un'azione contrattuale, illecita o altro, derivante da, fuori o in connessione con il software o l'uso o altri rapporti in il software.</value>
+  </data>
   <data name="LicenseTitle_Text" xml:space="preserve">
     <value>Licenza</value>
   </data>
   <data name="License_Text" xml:space="preserve">
     <value>Questa applicazione può essere utilizzata liberamente per scopi non commerciali.
-Utilizzare questo programma interamente a proprio rischio.
-
-IL SOFTWARE VIENE FORNITO "COSÌ COM'È", SENZA ALCUN TIPO DI GARANZIA, ESPRESSA O IMPLICITA, INCLUSE, A TITOLO ESEMPLIFICATIVO, LE GARANZIE DI COMMERCIABILITÀ, IDONEITÀ PER UNO SCOPO PARTICOLARE E NON VIOLAZIONE. IN NESSUN CASO L'AUTORE E/O L'EDITORE SARÀ RESPONSABILE DI ALCUN RECLAMO, DANNO O ALTRA RESPONSABILITÀ, SIA IN UN'AZIONE CONTRATTUALE, ILLECITO O ALTRO, DERIVANTE DA, DERIVANTE DA O IN COLLEGAMENTO CON IL SOFTWARE O L'UTILIZZO O ALTRI CONTRATTI NEL SOFTWARE.</value>
+Utilizzare questo programma interamente a proprio rischio.</value>
   </data>
   <data name="Light_Text" xml:space="preserve">
     <value>Leggero</value>

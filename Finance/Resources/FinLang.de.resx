@@ -415,14 +415,15 @@ Geben Sie die Höhe des Ertrags pro Jahr und den gewünschten Ertrag in Prozent 
   <data name="LicenseAgreement_Text" xml:space="preserve">
     <value>Sind Sie mit den Lizenzbedingungen einverstanden?</value>
   </data>
+  <data name="LicenseMit2_Text" xml:space="preserve">
+    <value>Die Software wird „wie besehen“ bereitgestellt, ohne Gewährleistung jeglicher Art, weder ausdrücklich noch stillschweigend, einschließlich, aber nicht beschränkt auf die Gewährleistung der Marktgängigkeit, Eignung für einen bestimmten Zweck und Nichtverletzung. In keinem Fall haften der Autor und/oder Herausgeber für Ansprüche, Schäden oder andere Haftungen, sei es aus einem Vertrag, aus unerlaubter Handlung oder auf andere Weise, die sich aus, aus oder im Zusammenhang mit der Software oder der Verwendung oder sonstigen Handlungen ergeben die Software.</value>
+  </data>
   <data name="LicenseTitle_Text" xml:space="preserve">
     <value>Lizenz</value>
   </data>
   <data name="License_Text" xml:space="preserve">
     <value>Diese Anwendung darf für nichtkommerzielle Zwecke frei verwendet werden.
-Verwenden Sie dieses Programm ausschließlich auf eigene Gefahr.
-
-DIE SOFTWARE WIRD OHNE MÄNGELGEWÄHR BEREITGESTELLT, OHNE AUSDRÜCKLICHE ODER STILLSCHWEIGENDE GEWÄHRLEISTUNG, EINSCHLIESSLICH, ABER NICHT BESCHRÄNKT AUF GEWÄHRLEISTUNGEN DER MARKTFÄHIGKEIT, EIGNUNG FÜR EINEN BESTIMMTEN ZWECK UND NICHTVERLETZUNG VON RECHTEN DRITTER. DER AUTOR UND/ODER VERLEGER HAFTET IN KEINEM FALL FÜR ANSPRÜCHE, SCHÄDEN ODER SONSTIGE HAFTUNG, OB AUS VERTRAG, UNERLAUBTER HANDLUNG ODER ANDERWEITIG, DIE SICH AUS, AUS ODER IM ZUSAMMENHANG MIT DER SOFTWARE ODER DER NUTZUNG ODER ANDEREN HANDLUNGEN MIT DER SOFTWARE ERGEBEN.</value>
+Verwenden Sie dieses Programm ausschließlich auf eigene Gefahr.</value>
   </data>
   <data name="Light_Text" xml:space="preserve">
     <value>Hell</value>

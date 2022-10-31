@@ -912,9 +912,7 @@ namespace Finance.Resources {
         
         /// <summary>
         ///   Looks up a localized string similar to This application may be used freely for non-commercial purposes.
-        ///Use this program entirely at your own risk.
-        ///
-        ///THE SOFTWARE IS PROVIDED &apos;AS IS&apos;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHOR AND/OR PUBLISHER BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH TH [rest of string was truncated]&quot;;.
+        ///Use this program entirely at your own risk..
         /// </summary>
         internal static string License_Text {
             get {
@@ -928,6 +926,15 @@ namespace Finance.Resources {
         internal static string LicenseAgreement_Text {
             get {
                 return ResourceManager.GetString("LicenseAgreement_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The software is provided &apos;as is&apos;, without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose and noninfringement. In no event shall the author and/or publisher be liable for any claim, damages or other liability, whether in an action of contract, tort or otherwise, arising from, out of or in connection with the software or the use or other dealings in the software..
+        /// </summary>
+        internal static string LicenseMit2_Text {
+            get {
+                return ResourceManager.GetString("LicenseMit2_Text", resourceCulture);
             }
         }
         

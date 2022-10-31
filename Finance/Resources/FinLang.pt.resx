@@ -415,14 +415,15 @@ Insira o valor do rendimento por ano e o rendimento desejado em porcentagem.</va
   <data name="LicenseAgreement_Text" xml:space="preserve">
     <value>Você concorda com as condições da licença?</value>
   </data>
+  <data name="LicenseMit2_Text" xml:space="preserve">
+    <value>O software é fornecido 'como está', sem garantia de qualquer tipo, expressa ou implícita, incluindo, mas não se limitando às garantias de comercialização, adequação a uma finalidade específica e não violação. Em nenhum caso o autor e/ou editor será responsável por qualquer reclamação, dano ou outra responsabilidade, seja em uma ação de contrato, ato ilícito ou de outra forma, decorrente, fora ou em conexão com o software ou o uso ou outras negociações em o software.</value>
+  </data>
   <data name="LicenseTitle_Text" xml:space="preserve">
     <value>Licença</value>
   </data>
   <data name="License_Text" xml:space="preserve">
     <value>Este aplicativo pode ser usado livremente para fins não comerciais.
-Use este programa inteiramente por sua conta e risco.
-
-O SOFTWARE É FORNECIDO 'COMO ESTÁ', SEM GARANTIA DE QUALQUER TIPO, EXPRESSA OU IMPLÍCITA, INCLUINDO MAS NÃO LIMITADO ÀS GARANTIAS DE COMERCIALIZAÇÃO, ADEQUAÇÃO A UM DETERMINADO FIM E NÃO VIOLAÇÃO. EM NENHUMA CIRCUNSTÂNCIA O AUTOR E/OU EDITOR SERÁ RESPONSÁVEL POR QUALQUER RECLAMAÇÃO, DANOS OU OUTRA RESPONSABILIDADE, SEJA EM UMA AÇÃO DE CONTRATO, ATO ILÍCITO OU DE OUTRA FORMA, DECORRENTE DE OU EM CONEXÃO COM O SOFTWARE OU O USO OU OUTRAS NEGOCIAÇÕES NO SOFTWARE.</value>
+Use este programa inteiramente por sua conta e risco.</value>
   </data>
   <data name="Light_Text" xml:space="preserve">
     <value>Clara</value>

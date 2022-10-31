@@ -2,7 +2,7 @@
 // Author ......: Geert Geerits - E-mail: geertgeerits@gmail.com
 // Copyright ...: (C) 1992-2022
 // Version .....: 3.0.50 Beta
-// Date ........: 2022-10-30 (YYYY-MM-DD)
+// Date ........: 2022-10-31 (YYYY-MM-DD)
 // Language ....: Microsoft Visual Studio 2022: .NET MAUI C# 10.0
 // Description .: Financial calculations
 
@@ -372,7 +372,7 @@ public partial class MainPage : ContentPage
 
         cCopyright = FinLang.Copyright_Text + " © 1992-2022 Geert Geerits";
         cLicenseTitle = FinLang.LicenseTitle_Text;
-        cLicenseText = FinLang.License_Text;
+        cLicenseText = FinLang.License_Text + "\n\n" + FinLang.LicenseMit2_Text;
         cAgree = FinLang.Agree_Text;
         cDisagree = FinLang.Disagree_Text;
 

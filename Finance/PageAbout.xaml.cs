@@ -26,7 +26,7 @@ public partial class PageAbout : ContentPage
         lblEmail.Text = FinLang.Email_Text + " " + lblEmail.Text;
         lblWebsite.Text = FinLang.Website_Text + " " + lblWebsite.Text;
         lblPrivacyPolicy.Text = FinLang.PrivacyPolicyTitle_Text + " " + FinLang.PrivacyPolicy_Text;
-        lblLicense.Text = FinLang.LicenseTitle_Text + ": " + FinLang.License_Text;
+        lblLicense.Text = FinLang.LicenseTitle_Text + ": " + FinLang.License_Text + "\n\n" + FinLang.LicenseMit2_Text;
         lblAboutExplanation.Text = FinLang.AboutExplanation_Text;
     }
 

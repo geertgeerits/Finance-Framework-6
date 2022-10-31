@@ -415,14 +415,15 @@ Enter the amount of the yield per year and the desired yield in percentage.</val
   <data name="LicenseAgreement_Text" xml:space="preserve">
     <value>Do you agree with the license conditions?</value>
   </data>
+  <data name="LicenseMit2_Text" xml:space="preserve">
+    <value>The software is provided 'as is', without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose and noninfringement. In no event shall the author and/or publisher be liable for any claim, damages or other liability, whether in an action of contract, tort or otherwise, arising from, out of or in connection with the software or the use or other dealings in the software.</value>
+  </data>
   <data name="LicenseTitle_Text" xml:space="preserve">
     <value>License</value>
   </data>
   <data name="License_Text" xml:space="preserve">
     <value>This application may be used freely for non-commercial purposes.
-Use this program entirely at your own risk.
-
-THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHOR AND/OR PUBLISHER BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</value>
+Use this program entirely at your own risk.</value>
   </data>
   <data name="Light_Text" xml:space="preserve">
     <value>Light</value>

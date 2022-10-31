@@ -415,14 +415,15 @@ Ingrese la cantidad del rendimiento por año y el rendimiento deseado en porcent
   <data name="LicenseAgreement_Text" xml:space="preserve">
     <value>¿Estás de acuerdo con las condiciones de la licencia?</value>
   </data>
+  <data name="LicenseMit2_Text" xml:space="preserve">
+    <value>El software se proporciona "tal cual", sin garantía de ningún tipo, expresa o implícita, incluidas, entre otras, las garantías de comerciabilidad, idoneidad para un propósito particular y no infracción. En ningún caso el autor y/o el editor serán responsables de ningún reclamo, daño u otra responsabilidad, ya sea en una acción contractual, extracontractual o de otro tipo, que surja de, o esté relacionado con el software o el uso u otros tratos en El software.</value>
+  </data>
   <data name="LicenseTitle_Text" xml:space="preserve">
     <value>Licencia</value>
   </data>
   <data name="License_Text" xml:space="preserve">
     <value>Esta aplicación se puede utilizar libremente para fines no comerciales.
-Utilice este programa bajo su propio riesgo.
-
-EL SOFTWARE SE PROPORCIONA 'TAL CUAL', SIN GARANTÍA DE NINGÚN TIPO, EXPRESA O IMPLÍCITA, INCLUYENDO, ENTRE OTRAS, LAS GARANTÍAS DE COMERCIABILIDAD, IDONEIDAD PARA UN FIN DETERMINADO Y NO VIOLACIÓN. EN NINGÚN CASO EL AUTOR Y/O EL EDITOR SERÁ RESPONSABLE DE CUALQUIER RECLAMACIÓN, DAÑOS U OTRA RESPONSABILIDAD, YA SEA EN UNA ACCIÓN DE CONTRATO, AGRAVIO O DE CUALQUIER OTRO TIPO, QUE SURJA DE, FUERA DE O EN RELACIÓN CON EL SOFTWARE O EL USO U OTRAS OPERACIONES EN EL SOFTWARE.</value>
+Utilice este programa bajo su propio riesgo.</value>
   </data>
   <data name="Light_Text" xml:space="preserve">
     <value>Ligero</value>
