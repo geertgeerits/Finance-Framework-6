@@ -201,6 +201,9 @@ Voor eventuele correcties kunt u altijd contact met mij opnemen.</value>
   <data name="Date2_Text" xml:space="preserve">
     <value>Datum 2:</value>
   </data>
+  <data name="DateDays_Text" xml:space="preserve">
+    <value>dagen</value>
+  </data>
   <data name="DateDifferenceDays_Text" xml:space="preserve">
     <value>Datumverschil in dagen:</value>
   </data>
@@ -213,6 +216,9 @@ Voor eventuele correcties kunt u altijd contact met mij opnemen.</value>
   <data name="DateDifferenceSeconds_Text" xml:space="preserve">
     <value>= seconden:</value>
   </data>
+  <data name="DateDifferenceYearMonthDay_Text" xml:space="preserve">
+    <value>Datumverschil in jaren, maanden en dagen:</value>
+  </data>
   <data name="DateFirstRepayment_Text" xml:space="preserve">
     <value>Datum eerste aflossing:</value>
   </data>
@@ -221,6 +227,12 @@ Voor eventuele correcties kunt u altijd contact met mij opnemen.</value>
   </data>
   <data name="DateISO8601_Text" xml:space="preserve">
     <value>ISO 8601</value>
+  </data>
+  <data name="DateMonths_Text" xml:space="preserve">
+    <value>maanden</value>
+  </data>
+  <data name="DateYears_Text" xml:space="preserve">
+    <value>jaren</value>
   </data>
   <data name="DayEndMonth_Text" xml:space="preserve">
     <value>Einde maand:</value>

@@ -11,7 +11,7 @@
     </Shell.TitleView>
     
     <ScrollView>
-        <Grid RowDefinitions="Auto, 50, 50, 50, 50, 50, 50, 50"
+        <Grid RowDefinitions="Auto, 50, 50, 50, 50, 50, 50, 40, 50, 50"
               ColumnDefinitions="160, 160, 40*"
               Margin="8"
               ColumnSpacing="6"
@@ -138,15 +138,40 @@
                        Grid.Column="1" />
             </Border>
 
+            <Label x:Name="lblDateDifferenceYearMonthDay"
+                   Style="{StaticResource labelStyleDefault}"
+                   Grid.Row="7"
+                   Grid.Column="0"
+                   Grid.ColumnSpan="2"
+                   VerticalOptions="End"
+                   Text="Date difference in years, months and days:" />
+
+            <Border Style="{StaticResource borderStyleDefault}"
+                    Grid.Row="8"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    StrokeShape="RoundRectangle 5,5,5,5">
+
+                <Label x:Name="txtDateDifferenceYearMonthDay"
+                       Style="{StaticResource labelStyleResult}"
+                       Grid.Row="8"
+                       Grid.Column="0"
+                       Grid.ColumnSpan="2"
+                       VerticalOptions="Start"
+                       WidthRequest="320"
+                       HorizontalTextAlignment="Start"
+                       />
+            </Border>
+
             <Button x:Name="btnCalculate"
                     Style="{StaticResource buttonStyleCalculate}"
-                    Grid.Row="7"
+                    Grid.Row="9"
                     Grid.Column="0"
                     Clicked="CalculateResult" />
 
             <Button x:Name="btnReset"
                     Style="{StaticResource buttonStyleReset}"
-                    Grid.Row="7"
+                    Grid.Row="9"
                     Grid.Column="1"
                     Clicked="ResetEntryFields" />
         </Grid>

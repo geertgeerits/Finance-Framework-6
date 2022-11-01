@@ -201,6 +201,9 @@ You can always contact me for any corrections.</value>
   <data name="Date2_Text" xml:space="preserve">
     <value>Date 2:</value>
   </data>
+  <data name="DateDays_Text" xml:space="preserve">
+    <value>days</value>
+  </data>
   <data name="DateDifferenceDays_Text" xml:space="preserve">
     <value>Date difference in days:</value>
   </data>
@@ -213,6 +216,9 @@ You can always contact me for any corrections.</value>
   <data name="DateDifferenceSeconds_Text" xml:space="preserve">
     <value>= seconds:</value>
   </data>
+  <data name="DateDifferenceYearMonthDay_Text" xml:space="preserve">
+    <value>Date difference in years, months and days:</value>
+  </data>
   <data name="DateFirstRepayment_Text" xml:space="preserve">
     <value>Date first repayment:</value>
   </data>
@@ -221,6 +227,12 @@ You can always contact me for any corrections.</value>
   </data>
   <data name="DateISO8601_Text" xml:space="preserve">
     <value>ISO 8601</value>
+  </data>
+  <data name="DateMonths_Text" xml:space="preserve">
+    <value>months</value>
+  </data>
+  <data name="DateYears_Text" xml:space="preserve">
+    <value>years</value>
   </data>
   <data name="DayEndMonth_Text" xml:space="preserve">
     <value>End month:</value>

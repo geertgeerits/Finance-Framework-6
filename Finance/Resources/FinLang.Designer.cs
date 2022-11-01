@@ -292,6 +292,15 @@ namespace Finance.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to days.
+        /// </summary>
+        internal static string DateDays_Text {
+            get {
+                return ResourceManager.GetString("DateDays_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Date difference in days:.
         /// </summary>
         internal static string DateDifferenceDays_Text {
@@ -328,6 +337,15 @@ namespace Finance.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Date difference in years, months and days:.
+        /// </summary>
+        internal static string DateDifferenceYearMonthDay_Text {
+            get {
+                return ResourceManager.GetString("DateDifferenceYearMonthDay_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Date first repayment:.
         /// </summary>
         internal static string DateFirstRepayment_Text {
@@ -351,6 +369,24 @@ namespace Finance.Resources {
         internal static string DateISO8601_Text {
             get {
                 return ResourceManager.GetString("DateISO8601_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to months.
+        /// </summary>
+        internal static string DateMonths_Text {
+            get {
+                return ResourceManager.GetString("DateMonths_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to years.
+        /// </summary>
+        internal static string DateYears_Text {
+            get {
+                return ResourceManager.GetString("DateYears_Text", resourceCulture);
             }
         }
         

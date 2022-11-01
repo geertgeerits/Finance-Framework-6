@@ -3,6 +3,11 @@
 namespace Finance;
 public partial class PageDifferenceDates : ContentPage
 {
+    // Local variables.
+    private string cYear;
+    private string cMonth;
+    private string cDay;
+
     public PageDifferenceDates()
     {
         try
@@ -25,6 +30,7 @@ public partial class PageDifferenceDates : ContentPage
         lblDateDifferenceHours.Text = FinLang.DateDifferenceHours_Text;
         lblDateDifferenceMinutes.Text = FinLang.DateDifferenceMinutes_Text;
         lblDateDifferenceSeconds.Text = FinLang.DateDifferenceSeconds_Text;
+        lblDateDifferenceYearMonthDay.Text = FinLang.DateDifferenceYearMonthDay_Text;
 
         btnCalculate.Text = FinLang.Calculate_Text;
         btnReset.Text = FinLang.Reset_Text;
@@ -37,6 +43,10 @@ public partial class PageDifferenceDates : ContentPage
 
         dtpDate1.Format = MainPage.cDateFormat;
         dtpDate2.Format = MainPage.cDateFormat;
+
+        cYear = " " + FinLang.DateYears_Text + ", ";
+        cMonth = " " + FinLang.DateMonths_Text + ", ";
+        cDay = " " + FinLang.DateDays_Text;
 
         // Set focus to the first entry field.
         dtpDate1.Focus();
@@ -63,20 +73,36 @@ public partial class PageDifferenceDates : ContentPage
     // Calculate the result.
     private void CalculateResult(object sender, EventArgs e)
     {
-        // Calculate the difference.
+        // Calculate the date difference in days, hours, minutes and seconds.
+        decimal nDateDifference = (dtpDate2.Date - dtpDate1.Date).Days;
+        txtDateDifferenceDays.Text = MainPage.RoundDecimalToNumDecimals(ref nDateDifference, 0, "N");
+            
+        nDateDifference *= 24;
+        txtDateDifferenceHours.Text = MainPage.RoundDecimalToNumDecimals(ref nDateDifference, 0, "N");
+            
+        nDateDifference *= 60;
+        txtDateDifferenceMinutes.Text = MainPage.RoundDecimalToNumDecimals(ref nDateDifference, 0, "N");
+            
+        nDateDifference *= 60;
+        txtDateDifferenceSeconds.Text = MainPage.RoundDecimalToNumDecimals(ref nDateDifference, 0, "N");
+
+        // Calculate the date difference in years, months and days.
+        TimeSpan timeSpan;
+        if (dtpDate2.Date >= dtpDate1.Date)
         {
-            decimal nDateDifference = (dtpDate2.Date - dtpDate1.Date).Days;
-            txtDateDifferenceDays.Text = MainPage.RoundDecimalToNumDecimals(ref nDateDifference, 0, "N");
-            
-            nDateDifference *= 24;
-            txtDateDifferenceHours.Text = MainPage.RoundDecimalToNumDecimals(ref nDateDifference, 0, "N");
-            
-            nDateDifference *= 60;
-            txtDateDifferenceMinutes.Text = MainPage.RoundDecimalToNumDecimals(ref nDateDifference, 0, "N");
-            
-            nDateDifference *= 60;
-            txtDateDifferenceSeconds.Text = MainPage.RoundDecimalToNumDecimals(ref nDateDifference, 0, "N");
+            timeSpan = dtpDate2.Date - dtpDate1.Date;
         }
+        else
+        {
+            timeSpan = dtpDate1.Date - dtpDate2.Date;
+        }
+
+        DateTime dtDateDiff = DateTime.MinValue + timeSpan;
+        int nYears = dtDateDiff.Year - 1;
+        int nMonths = dtDateDiff.Month - 1;
+        int nDays = dtDateDiff.Day - 1;
+
+        txtDateDifferenceYearMonthDay.Text = nYears.ToString() + cYear + nMonths.ToString() + cMonth + nDays.ToString() + cDay;
 
         // Set focus.
         btnCalculate.Focus();
@@ -91,6 +117,7 @@ public partial class PageDifferenceDates : ContentPage
         txtDateDifferenceHours.Text = "";
         txtDateDifferenceMinutes.Text = "";
         txtDateDifferenceSeconds.Text = "";
+        txtDateDifferenceYearMonthDay.Text = "";
 
         //dtpDate1.Focus();  //Let the date picker to pop up in Android
     }
