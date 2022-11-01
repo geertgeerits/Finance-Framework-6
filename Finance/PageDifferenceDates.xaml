@@ -142,7 +142,7 @@
                    Style="{StaticResource labelStyleDefault}"
                    Grid.Row="7"
                    Grid.Column="0"
-                   Grid.ColumnSpan="2"
+                   Grid.ColumnSpan="3"
                    VerticalOptions="End"
                    Text="Date difference in years, months and days:" />
 
@@ -159,8 +159,7 @@
                        Grid.ColumnSpan="2"
                        VerticalOptions="Start"
                        WidthRequest="320"
-                       HorizontalTextAlignment="Start"
-                       />
+                       HorizontalTextAlignment="End" />
             </Border>
 
             <Button x:Name="btnCalculate"

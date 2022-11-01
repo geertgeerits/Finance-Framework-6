@@ -202,7 +202,10 @@ Vous pouvez toujours me contacter pour toute correction.</value>
     <value>Date 2:</value>
   </data>
   <data name="DateDays_Text" xml:space="preserve">
-    <value>journées</value>
+    <value>jours</value>
+  </data>
+  <data name="DateDay_Text" xml:space="preserve">
+    <value>jour</value>
   </data>
   <data name="DateDifferenceDays_Text" xml:space="preserve">
     <value>Différence de date en jours:</value>
@@ -231,8 +234,14 @@ Vous pouvez toujours me contacter pour toute correction.</value>
   <data name="DateMonths_Text" xml:space="preserve">
     <value>mois</value>
   </data>
+  <data name="DateMonth_Text" xml:space="preserve">
+    <value>mois</value>
+  </data>
   <data name="DateYears_Text" xml:space="preserve">
     <value>années</value>
+  </data>
+  <data name="DateYear_Text" xml:space="preserve">
+    <value>an</value>
   </data>
   <data name="DayEndMonth_Text" xml:space="preserve">
     <value>Fin de mois:</value>

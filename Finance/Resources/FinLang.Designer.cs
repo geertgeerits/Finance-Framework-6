@@ -292,6 +292,15 @@ namespace Finance.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to day.
+        /// </summary>
+        internal static string DateDay_Text {
+            get {
+                return ResourceManager.GetString("DateDay_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to days.
         /// </summary>
         internal static string DateDays_Text {
@@ -373,11 +382,29 @@ namespace Finance.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to month.
+        /// </summary>
+        internal static string DateMonth_Text {
+            get {
+                return ResourceManager.GetString("DateMonth_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to months.
         /// </summary>
         internal static string DateMonths_Text {
             get {
                 return ResourceManager.GetString("DateMonths_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to year.
+        /// </summary>
+        internal static string DateYear_Text {
+            get {
+                return ResourceManager.GetString("DateYear_Text", resourceCulture);
             }
         }
         

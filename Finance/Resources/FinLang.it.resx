@@ -204,6 +204,9 @@ Potete sempre contattarmi per eventuali correzioni.</value>
   <data name="DateDays_Text" xml:space="preserve">
     <value>giorni</value>
   </data>
+  <data name="DateDay_Text" xml:space="preserve">
+    <value>giorno</value>
+  </data>
   <data name="DateDifferenceDays_Text" xml:space="preserve">
     <value>Differenza di data in giorni:</value>
   </data>
@@ -231,8 +234,14 @@ Potete sempre contattarmi per eventuali correzioni.</value>
   <data name="DateMonths_Text" xml:space="preserve">
     <value>mesi</value>
   </data>
+  <data name="DateMonth_Text" xml:space="preserve">
+    <value>mese</value>
+  </data>
   <data name="DateYears_Text" xml:space="preserve">
     <value>anni</value>
+  </data>
+  <data name="DateYear_Text" xml:space="preserve">
+    <value>anno</value>
   </data>
   <data name="DayEndMonth_Text" xml:space="preserve">
     <value>Fine del mese:</value>

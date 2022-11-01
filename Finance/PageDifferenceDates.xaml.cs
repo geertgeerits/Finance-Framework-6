@@ -3,11 +3,6 @@
 namespace Finance;
 public partial class PageDifferenceDates : ContentPage
 {
-    // Local variables.
-    private string cYear;
-    private string cMonth;
-    private string cDay;
-
     public PageDifferenceDates()
     {
         try
@@ -44,21 +39,18 @@ public partial class PageDifferenceDates : ContentPage
         dtpDate1.Format = MainPage.cDateFormat;
         dtpDate2.Format = MainPage.cDateFormat;
 
-        cYear = " " + FinLang.DateYears_Text + ", ";
-        cMonth = " " + FinLang.DateMonths_Text + ", ";
-        cDay = " " + FinLang.DateDays_Text;
-
         // Set focus to the first entry field.
         dtpDate1.Focus();
     }
 
-    // Clear result field if the date have changed.
+    // Clear result fields if the date have changed.
     private void DatePickerDateSelected(object sender, EventArgs e)
     {
         txtDateDifferenceDays.Text = "";
         txtDateDifferenceHours.Text = "";
         txtDateDifferenceMinutes.Text = "";
         txtDateDifferenceSeconds.Text = "";
+        txtDateDifferenceYearMonthDay.Text = "";
     }
 
     // Go to the next field when the return key have been pressed.
@@ -102,13 +94,44 @@ public partial class PageDifferenceDates : ContentPage
         int nMonths = dtDateDiff.Month - 1;
         int nDays = dtDateDiff.Day - 1;
 
+        string cYear;
+        string cMonth;
+        string cDay;
+
+        if (nYears == 1)
+        {
+            cYear = " " + FinLang.DateYear_Text + ", ";
+        }
+        else
+        {
+            cYear = " " + FinLang.DateYears_Text + ", ";
+        }
+
+        if (nMonths == 1)
+        {
+            cMonth = " " + FinLang.DateMonth_Text + ", ";
+        }
+        else
+        {
+            cMonth = " " + FinLang.DateMonths_Text + ", ";
+        }
+
+        if (nDays == 1)
+        {
+            cDay = " " + FinLang.DateDay_Text;
+        }
+        else
+        {
+            cDay = " " + FinLang.DateDays_Text;
+        }
+
         txtDateDifferenceYearMonthDay.Text = nYears.ToString() + cYear + nMonths.ToString() + cMonth + nDays.ToString() + cDay;
 
         // Set focus.
         btnCalculate.Focus();
     }
 
-    // Reset the entry fields.
+    // Reset the entry and result fields.
     private void ResetEntryFields(object sender, EventArgs e)
     {
         dtpDate1.Date = DateTime.Today;
