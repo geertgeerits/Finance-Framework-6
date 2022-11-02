@@ -96,30 +96,28 @@ public partial class PageDifferenceDates : ContentPage
         txtDateDifferenceMinutes.Text = "";
         txtDateDifferenceSeconds.Text = "";
         txtDateDifferenceYearMonthDay.Text = "";
-
-        //dtpDate1.Focus();  //Let the date picker to pop up in Android.
     }
 }
 
 // Class to calculate the date difference in years, months and days.
 // Source: https://www.codeproject.com/Articles/28837/Calculating-Duration-Between-Two-Dates-in-Years-Mo
+// by: Mohammed Ali Babu
 public class DateDifference
 {
-    // Defining Number of days in month; index 0=> january and 11=> December.
-    // February contain either 28 or 29 days, that's why here value is -1
-    // which wil be calculate later.
-    private int[] monthDay = new int[12] { 31, -1, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
+    // Defining Number of days in month; index 0=> january and 11=> december.
+    // February contain either 28 or 29 days, that's why here value is -1 which wil be calculate later.
+    private readonly int[] monthDay = new int[12] { 31, -1, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
 
     // Contain from date.
-    private DateTime fromDate;
+    private readonly DateTime fromDate;
 
     // Contain to date.
-    private DateTime toDate;
+    private readonly DateTime toDate;
 
     // This three variable for output representation.
-    private int year;
-    private int month;
-    private int day;
+    private readonly int year;
+    private readonly int month;
+    private readonly int day;
 
     public DateDifference(DateTime d1, DateTime d2)
     {
@@ -127,30 +125,30 @@ public class DateDifference
 
         if (d1 > d2)
         {
-            this.fromDate = d2;
-            this.toDate = d1;
+            fromDate = d2;
+            toDate = d1;
         }
         else
         {
-            this.fromDate = d1;
-            this.toDate = d2;
+            fromDate = d1;
+            toDate = d2;
         }
 
         // Day Calculation.
         increment = 0;
 
-        if (this.fromDate.Day > this.toDate.Day)
+        if (fromDate.Day > toDate.Day)
         {
-            increment = this.monthDay[this.fromDate.Month - 1];
-
+            increment = monthDay[fromDate.Month - 1];
         }
+
         // If it is february month.
         // If it's to day is less then from day.
         if (increment == -1)
         {
-            if (DateTime.IsLeapYear(this.fromDate.Year))
+            if (DateTime.IsLeapYear(fromDate.Year))
             {
-                // leap year february contain 29 days
+                // Leap year february contain 29 days.
                 increment = 29;
             }
             else
@@ -158,31 +156,31 @@ public class DateDifference
                 increment = 28;
             }
         }
+        
         if (increment != 0)
         {
-            day = (this.toDate.Day + increment) - this.fromDate.Day;
+            day = (toDate.Day + increment) - fromDate.Day;
             increment = 1;
         }
         else
         {
-            day = this.toDate.Day - this.fromDate.Day;
+            day = toDate.Day - fromDate.Day;
         }
 
         // Month calculation.
-        if ((this.fromDate.Month + increment) > this.toDate.Month)
+        if ((fromDate.Month + increment) > toDate.Month)
         {
-            this.month = (this.toDate.Month + 12) - (this.fromDate.Month + increment);
+            month = (toDate.Month + 12) - (fromDate.Month + increment);
             increment = 1;
         }
         else
         {
-            this.month = (this.toDate.Month) - (this.fromDate.Month + increment);
+            month = (toDate.Month) - (fromDate.Month + increment);
             increment = 0;
         }
 
         // Year calculation.
-        this.year = this.toDate.Year - (this.fromDate.Year + increment);
-
+        year = toDate.Year - (fromDate.Year + increment);
     }
 
     public override string ToString()
@@ -225,7 +223,7 @@ public class DateDifference
     {
         get
         {
-            return this.year;
+            return year;
         }
     }
 
@@ -233,7 +231,7 @@ public class DateDifference
     {
         get
         {
-            return this.month;
+            return month;
         }
     }
 
@@ -241,7 +239,7 @@ public class DateDifference
     {
         get
         {
-            return this.day;
+            return day;
         }
     }
 }
