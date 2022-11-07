@@ -19,7 +19,7 @@
 		<ApplicationIdGuid>54742229-37CC-49C8-814D-220A22B0EF1F</ApplicationIdGuid>
 
 		<!-- Versions -->
-		<ApplicationDisplayVersion>3.0.50</ApplicationDisplayVersion>
+		<ApplicationDisplayVersion>3.0.51</ApplicationDisplayVersion>
 		<ApplicationVersion>3</ApplicationVersion>
 
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">14.2</SupportedOSPlatformVersion>
@@ -34,8 +34,8 @@
 		<Description>Financial applications</Description>
 		<Copyright>Geert Geerits</Copyright>
 		<PackageReadmeFile>ReadMe.md</PackageReadmeFile>
-		<FileVersion>3.0.50</FileVersion>
-		<AssemblyVersion>3.0.50</AssemblyVersion>
+		<FileVersion>3.0.51</FileVersion>
+		<AssemblyVersion>3.0.51</AssemblyVersion>
 		<PackageCertificateThumbprint>3258A94BC8069F3911EA6D4619347375B5F4824A</PackageCertificateThumbprint>
 		<AppxPackageSigningEnabled>True</AppxPackageSigningEnabled>
 	</PropertyGroup>
@@ -177,8 +177,8 @@
 		<AndroidSigningKeyAlias>key</AndroidSigningKeyAlias>
 		<AndroidSigningKeyPass></AndroidSigningKeyPass>
 		<AndroidSigningStorePass></AndroidSigningStorePass>
-		<ApplicationDisplayVersion>3.0.50</ApplicationDisplayVersion>
-		<ApplicationVersion>50</ApplicationVersion>
+		<ApplicationDisplayVersion>3.0.51</ApplicationDisplayVersion>
+		<ApplicationVersion>51</ApplicationVersion>
 		<ApplicationId>com.geertgeerits.finance</ApplicationId>
 	</PropertyGroup>
 </Project>
