@@ -25,6 +25,7 @@
                    Grid.Row="0"
                    Grid.Column="0"
                    Grid.ColumnSpan="3"
+                   HeightRequest="170"
                    Text="Return in percentages per year on investment: &#10;Enter the purchase amount (+ the amount of costs) and the amount of the revenue per year. &#10; &#10;Calculating the amount of the investment: &#10;Enter the amount of the yield per year and the desired yield in percentage." />
 
             <Label x:Name="lblNumDec"
