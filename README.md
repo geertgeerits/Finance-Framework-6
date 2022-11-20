@@ -1,4 +1,7 @@
 # Finance
+Bug report: https://github.com/dotnet/maui/issues/11217
+
+
 Financial applications.
 
 This is my first application made with .NET MAUI.
